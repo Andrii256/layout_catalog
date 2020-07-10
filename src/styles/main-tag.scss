@@ -13,10 +13,39 @@ body {
 .product-card {
   margin: 50px 0 0;
 
+  position: relative;
+
   width: $product-card-width;
   padding: 30px 14px 15px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $productCardBorderColor;
   border-radius: 5px;
+
+  &__picture-container {
+    height: 134px;
+    width: 160px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 1s linear, border 0s linear;
+    transform: scale($productImageStarterScale / 1000);
+    padding-top: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0 solid $productCardBorderColor;
+    &:hover {
+      border: 3px solid $productCardBorderColor;
+      transform: scale(1);
+    }
+  }
 
   &__title {
     display: block;
