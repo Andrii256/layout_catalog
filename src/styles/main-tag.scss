@@ -11,39 +11,27 @@ body {
 }
 
 .product-card {
-  margin: 50px 0 0;
+  margin: $gapBetweenCardRows 0 0;
 
   position: relative;
 
   width: $product-card-width;
-  padding: 30px 14px 15px;
+  padding: ($productImageTopPadding - 2px) 14px $productImageTopPadding;
   border: 1px solid $productCardBorderColor;
   border-radius: 5px;
 
-  &__picture-container {
-    height: 134px;
-    width: 160px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   &__img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: all 1s linear, border 0s linear;
-    transform: scale($productImageStarterScale / 1000);
-    padding-top: 16px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    border: 0 solid $productCardBorderColor;
+    display: block;
+    margin: auto;
+    padding-top: $productImageTopPadding - 1px;
+    max-width: $product-card-width * 0.83;
+    height: $productImageheight;
+    border: 3px solid transparent;
+    transition: transform 1s, border-color 0s;
     &:hover {
-      border: 3px solid $productCardBorderColor;
-      transform: scale(1);
+      border-color: #f3f3f3;
+      transform: scale(1.2);
+      cursor: zoom-in;
     }
   }
 
@@ -51,7 +39,7 @@ body {
     display: block;
     font-weight: 500;
     @include font-size($fz-medium, $lh-medium);
-    margin-top: 45px;
+    margin-top: 42px;
     margin-bottom: 5px;
     color: inherit;
     text-decoration: none;
@@ -81,6 +69,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     @include font-size($fz-large, $buy-button-height - 2);
+    transition-duration: 0.5s;
     &:hover {
       background-color: #fff;
       color: $moyo-blue;

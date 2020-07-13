@@ -10,6 +10,7 @@ body {
 $moyo-blue: #00acdc;
 $productCardBorderColor: #f3f3f3;
 $productImageStarterScale: 810;
+$productImageTopPadding: 15px;
 $fz-small: 11px;
 $lh-small: 13px;
 $fz-medium: 12px;
@@ -18,7 +19,10 @@ $fz-large: 14px;
 $fz-ex-large: 16px;
 $lh-ex-large: 19px;
 $header-height: 60px;
+$gapBetweenCardRows: 50px;
 $buy-button-height: 40px;
+$productImageheight: 154px;
+//I need it for pixel perfect. I etalon image picture is stretched
 
 $product-card-width: 200px;
 $grid-gap: 48px;
