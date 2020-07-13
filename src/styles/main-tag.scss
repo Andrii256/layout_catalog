@@ -99,7 +99,7 @@ body {
 }
 
 @for $i from 1 to 5 {
-  .product-stars_#{$i} .product-stars__star:nth-child(-n+#{$i}) {
+  .product-stars--#{$i} .product-stars__star:nth-child(-n+#{$i}) {
     background-image: url(/images/star-active.svg);
   }
 }
